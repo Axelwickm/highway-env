@@ -96,7 +96,6 @@ class HighwayEnv(AbstractEnv):
                            self.config["high_speed_reward"] + self.config["right_lane_reward"]],
                           [0, 1])
         reward = 0 if not self.vehicle.on_road else reward
-        print(action)
         return reward
 
     def _is_terminal(self) -> bool:
